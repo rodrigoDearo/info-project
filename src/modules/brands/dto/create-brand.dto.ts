@@ -8,3 +8,4 @@ export class CreateBrandDto {
   @MaxLength(100)
   name: string;
 }
+

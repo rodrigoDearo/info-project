@@ -34,3 +34,4 @@ export class Vehicle {
   @Column()
   created_by: string;
 }
+

@@ -29,3 +29,4 @@ export class VehicleModel {
   @Column()
   created_by: string;
 }
+

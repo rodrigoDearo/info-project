@@ -45,3 +45,4 @@ export class BrandsService {
     await this.brandRepository.remove(brand);
   }
 }
+

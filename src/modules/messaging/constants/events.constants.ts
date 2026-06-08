@@ -5,3 +5,4 @@ export const VehicleEvents = {
   UPDATED: 'vehicle.updated',
   DELETED: 'vehicle.deleted',
 } as const;
+

@@ -27,3 +27,4 @@ export const rabbitmqConfig = registerAs('rabbitmq', () => ({
   url: process.env.RABBITMQ_URL,
   vehicleQueue: process.env.RABBITMQ_VEHICLE_QUEUE ?? 'vehicle_events',
 }));
+

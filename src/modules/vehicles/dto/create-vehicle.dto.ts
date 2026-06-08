@@ -29,3 +29,4 @@ export class CreateVehicleDto {
   @IsPositive()
   model_id: number;
 }
+

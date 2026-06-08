@@ -14,3 +14,4 @@ export class CreateVehicleModelDto {
   @IsPositive()
   brand_id?: number;
 }
+

@@ -44,3 +44,4 @@ export class BrandsController {
     return this.brandsService.remove(id);
   }
 }
+

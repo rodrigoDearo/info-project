@@ -45,3 +45,4 @@ export class VehiclesController {
     return this.vehiclesService.remove(id, user.nickname);
   }
 }
+

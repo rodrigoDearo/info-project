@@ -38,3 +38,4 @@ export class VehicleModelsService {
     await this.vehicleModelRepository.remove(model);
   }
 }
+

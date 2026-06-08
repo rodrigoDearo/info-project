@@ -1,11 +1,11 @@
-version: '3.9'
-
 services:
+
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: fleet_sqlserver
     environment:
-      SA_PASSWORD: YourStrong@Passw0rd
+      MSSQL_SA_PASSWORD: "S3nh4_F0rt3_2026!"
+      SA_PASSWORD: "S3nh4_F0rt3_2026!"
       ACCEPT_EULA: Y
       MSSQL_PID: Developer
     ports:
@@ -13,10 +13,11 @@ services:
     volumes:
       - sqlserver_data:/var/opt/mssql
     healthcheck:
-      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "YourStrong@Passw0rd" -Q "SELECT 1" -b -o /dev/null
+      test: ["CMD", "/opt/mssql-tools18/bin/sqlcmd", "-C", "-S", "localhost", "-U", "sa", "-P", "S3nh4_F0rt3_2026!", "-Q", "SELECT 1", "-b", "-o", "/dev/null"]
       interval: 10s
       timeout: 5s
-      retries: 10
+      retries: 15
+      start_period: 20s
 
   mongodb:
     image: mongo:7-jammy
@@ -83,7 +84,10 @@ services:
       redis:     { condition: service_healthy }
       rabbitmq:  { condition: service_healthy }
     command: >
-      sh -c "npm run migration:run && npm run seed && npm run start:dev"
+      sh -c "npm run db:create &&
+         npm run migration:run &&
+         npm run seed &&
+         npm run start:dev"
 
 volumes:
   sqlserver_data:

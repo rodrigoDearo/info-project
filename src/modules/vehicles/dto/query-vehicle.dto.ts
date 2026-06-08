@@ -34,3 +34,4 @@ export class QueryVehicleDto {
   @IsInt()
   year?: number;
 }
+

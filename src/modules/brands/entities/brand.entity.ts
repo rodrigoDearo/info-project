@@ -21,3 +21,4 @@ export class Brand {
   @Column()
   created_by: string;
 }
+

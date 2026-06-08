@@ -11,3 +11,4 @@ import { MessagingModule } from '../messaging/messaging.module';
   providers: [VehiclesService],
 })
 export class VehiclesModule {}
+

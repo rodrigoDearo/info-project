@@ -11,3 +11,4 @@ import { BrandsService } from './brands.service';
   exports: [BrandsService],
 })
 export class BrandsModule {}
+

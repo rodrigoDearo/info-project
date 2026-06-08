@@ -29,3 +29,4 @@ export class AuditService {
     return this.auditLogModel.find({ entity, entityId }).sort({ createdAt: -1 }).exec();
   }
 }
+

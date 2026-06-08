@@ -26,3 +26,4 @@ export class MessagingService {
     this.client.emit(VehicleEvents.DELETED, payload);
   }
 }
+
