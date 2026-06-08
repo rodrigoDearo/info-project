@@ -29,21 +29,7 @@ docker-compose up
 ```
 Sobe SQL Server + MongoDB + Redis + RabbitMQ + API.
 Migrations e seed rodam automaticamente.
-
-## Rodando (local)
-```bash
-# Sobe apenas as dependências
-docker-compose up sqlserver mongodb redis rabbitmq -d
-
-# Migrations
-npm run migration:run
-
-# Seed
-npm run seed
-
-# Dev
-npm run start:dev
-```
+Endpoint http://localhost:3000  &  Documentacao: http://localhost:3000/docs
 
 ## Testes
 ```bash
@@ -92,4 +78,7 @@ RabbitMQ Management: `http://localhost:15672` (guest/guest)
 - Soft delete com campo `deleted_at`
 - Rate limiting por IP no login
 - Health check endpoint (/health)
-- Testes E2E com banco de teste isolado
+
+
+
+
